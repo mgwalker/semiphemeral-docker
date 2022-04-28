@@ -6,8 +6,8 @@ install it from pip, but that was grabbing an older version with a dependency
 mismatch. This Dockerfile handles fetching the most recent version and doing all
 the right dependency installs so you don't have to!
 
-1. Follow [the instructions](https://semiphemeral.com) to setup a Twitter app
-   and create OAuth tokens.
+1. Follow [the instructions](https://github.com/micahflee/semiphemeral#what-is-this)
+   to setup a Twitter app and create OAuth tokens.
 2. Clone this repo. Then create a directory in the root called `config`. This
    directory is where your Semiphemeral configuration and tweets archive will be
    stored.
@@ -21,5 +21,5 @@ the right dependency installs so you don't have to!
    described on the Semiphemeral site.
 5. When you're done, click save. You can now close your browser.
 6. Run `docker compose run semiphemeral <command>` where `command` is one of the
-   options listed at the top of [the instructions](https://semiphemeral.com),
+   options listed at the top of [the instructions](https://github.com/micahflee/semiphemeral#what-is-this),
    such as `fetch` or `delete`.
