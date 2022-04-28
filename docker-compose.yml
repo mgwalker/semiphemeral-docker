@@ -1,0 +1,12 @@
+version: "3.2"
+
+services:
+  semiphemeral:
+    build: .
+    working_dir: /app
+    volumes:
+      - ./config:/root/.semiphemeral
+      - ./archive:/archive
+    command: configure --host 0.0.0.0
+    ports:
+      - 8080:8080
