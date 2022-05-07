@@ -20,4 +20,9 @@ auth.set_access_token(config["access_token_key"], config["access_token_secret"])
 
 api = tweepy.API(auth)
 print("deleting tweet with status", sys.argv[1])
-api.destroy_status(sys.argv[1])
+try:
+    api.destroy_status(sys.argv[1])
+except tweepy.error.TweepError as e:
+    print("  --> error: ", e)
+else:
+    print("  --> DELETED!")
