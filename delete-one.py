@@ -22,7 +22,7 @@ api = tweepy.API(auth)
 print("deleting tweet with status", sys.argv[1])
 try:
     api.destroy_status(sys.argv[1])
-except tweepy.error.TweepError as e:
+except Exception as e:
     print("  --> error: ", e)
 else:
     print("  --> DELETED!")
